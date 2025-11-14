@@ -1,9 +1,0 @@
-// ✅ Purely for code fallback (not text!)
-export const FALLBACK_CODES = {
-  LOGIN_FAILED: "EL001",
-  LOGIN_SUCCESS: "IL001",
-  PASSWORD_MISMATCH: "EF003",
-  WRONG_OLD_PASSWORD: "EC001",
-  CHANGE_PASSWORD_SUCCESS: "ICP001",
-  SERVER_ERROR: "EA004",
-};
