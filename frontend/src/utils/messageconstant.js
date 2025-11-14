@@ -1,5 +1,0 @@
-export const FALLBACK_CODES = {
-  LOGIN_FAILED: "EL001",
-  LOGIN_SUCCESS: "IL001",
-  SERVER_ERROR: "EA010",
-};
