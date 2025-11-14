@@ -1,0 +1,83 @@
+/* Wrap entire dashboard area that sits inside the content panel */
+.user-dashboard-container {
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Full-width overview panel (same width feeling as header) */
+.overview-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(10, 31, 68, 0.08);
+  padding: 24px;
+}
+
+/* Welcome block (centered inside the full panel) */
+.welcome-section {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.welcome-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1f2b5c;
+  margin: 0 0 6px;
+}
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Stats title aligned to left, inside the panel */
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #26356a;
+  margin: 10px 0 14px;
+}
+
+/* Cards layout: full width grid, responsive */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* Individual stat card */
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e6ebf7;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(10, 31, 68, 0.06);
+}
+
+.stat-info h2 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #223063;
+  margin: 0 0 6px;
+}
+.stat-info p {
+  font-size: 13px;
+  color: #7680a5;
+  margin: 0;
+}
+
+/* Loading */
+.loading-text {
+  text-align: center;
+  font-size: 18px;
+  color: #223063;
+  margin-top: 50px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 1024px) {
+  .stats-cards { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+}
+@media (max-width: 640px) {
+  .stats-cards { grid-template-columns: 1fr; }
+}
