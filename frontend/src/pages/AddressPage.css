@@ -1,0 +1,197 @@
+/* ===================== ADDRESS PAGE ===================== */
+
+.address-container {
+  width: 90%;
+  max-width: 1100px;
+  background: #fff;
+  border-radius: 20px; /* ⬅️ added smooth corner radius */
+  padding: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+/* ====== Main Container ====== */
+.address-container {
+  width: 90%;
+  max-width: 1100px;
+  border-radius: 16px;
+  padding: 20px; /* inner spacing around the card */
+  box-shadow: none;
+}
+
+/* ====== Title ====== */
+.address-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0046b3;
+  background: #eaf2ff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+/* ====== Address Card ====== */
+.address-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 35px 40px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e6f0;
+}
+
+/* ====== Form Layout ====== */
+.address-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px 40px;
+}
+
+/* ====== Input Group ====== */
+.address-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.address-form-group input {
+  padding: 12px 14px;
+  border: 1.8px solid #d7dce5;
+  border-radius: 10px;
+  background-color: #f8faff;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.address-form-group input:hover {
+  background-color: #fff;
+  border-color: #b0b7c3;
+}
+
+.address-form-group input:focus {
+  border-color: #0d6efd;
+  background-color: #fff;
+  outline: none;
+}
+
+/* ====== Save Button ====== */
+.address-button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 34px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 3px 10px rgba(13, 110, 253, 0.2);
+  transition: all 0.25s ease;
+}
+
+.address-button:hover {
+  background: #0048b3;
+  transform: translateY(-2px);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .address-form {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .address-card {
+    padding: 25px;
+  }
+
+  .address-page {
+    padding: 40px 0; /* less padding on mobile */
+  }
+}
+.address-success {
+  grid-column: span 2;           /* spans both form columns */
+  margin: 12px auto 6px;
+  text-align: center;
+  color: #066a2f;                /* deep green */
+  background: rgba(6,106,47,0.06);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(6,106,47,0.06);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+/* ✅ Success alert centered above button */
+/* --- Centered small success message at bottom --- */
+.address-success-alert,
+.alert-success {
+  position: relative;        /* stays inside card */
+  width: fit-content;        /* shrink to text */
+  max-width: 320px;          /* prevent large box */
+  margin: 0 auto;            /* center horizontally */
+  margin-top: 20px;          /* space above */
+  text-align: center;
+
+  padding: 10px 16px;
+  border-radius: 8px;
+
+  background-color: #e6f4ea;
+  color: #1b6e36;
+  border: 1px solid #a8e6b0;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Field-level error styling (red box under field) */
+.address-form-group .alert-box {
+  margin-top: 6px;
+  width: 100%;
+  text-align: left;
+}
+
+/* Consistent alert box style */
+.alert-box {
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Error message (red) */
+.alert-error {
+  background-color: #fde8e8;
+  color: #c0392b;
+  border: 1px solid #f5c2c2;
+}
+
+/* Success message (green, centered above button) */
+/* Shrink success message width + center it */
+.alert-success {
+  width: fit-content;           /* shrink to content */
+  max-width: 70%;               /* prevent too wide */
+  margin: 10px auto;            /* center horizontally */
+  padding: 10px 18px;           /* smaller padding */
+  border-radius: 6px;
+  text-align: center;
+}
+
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

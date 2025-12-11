@@ -1,0 +1,210 @@
+/* ===================== EDIT PROFILE PAGE ===================== */
+
+/* ====== General Layout ====== */
+.edit-profile-page {
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  background: #f9fbff;
+  border-radius: 16px;
+  padding: 35px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ====== Header ====== */
+.edit-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eaf2ff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.edit-profile-header h2 {
+  color: #003691;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ====== Buttons ====== */
+.save-btn,
+.cancel-btn,
+.logout-btn {
+  border: none;
+  padding: 10px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* ✅ Save – Same blue as View Page BACK button */
+.save-btn {
+  background: #1e40af !important;
+  color: white !important;
+}
+.save-btn:hover {
+  background: #1e3a8a !important;
+  transform: translateY(-2px);
+}
+
+/* ✅ Cancel – Gray */
+.cancel-btn {
+  background: #6c757d !important;
+  color: #fff !important;
+}
+.cancel-btn:hover {
+  background: #565e64 !important;
+  transform: translateY(-2px);
+}
+
+/* ✅ Logout – Red */
+.logout-btn {
+  background: #dc2626 !important;
+  color: #fff !important;
+}
+.logout-btn:hover {
+  background: #b91c1c !important;
+  transform: translateY(-2px);
+}
+
+/* ====== Button Container ====== */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 35px;
+}
+
+/* ====== Form Cards ====== */
+.edit-profile-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 35px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.edit-subsection-title {
+  color: #003691;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e6f0;
+  padding-bottom: 8px;
+}
+
+/* ====== Input Layout ====== */
+.edit-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px 28px;
+}
+
+.edit-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* ====== Input Styles (Matched with View page) ====== */
+.edit-form-group label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.edit-form-group input,
+.edit-form-group select {
+  width: 100%;
+  background: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #000;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+/* Hover effect */
+.edit-form-group input:hover,
+.edit-form-group select:hover {
+  background: #fff;
+  border-color: #b0b7c3;
+}
+
+/* Focus effect */
+.edit-form-group input:focus,
+.edit-form-group select:focus {
+  background: #fff;
+  border-color: #003691;
+  outline: none;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 600px) {
+  .edit-profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .edit-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}
+/* ✅ Fix: Make headings same blue as View Profile */
+.edit-profile-card h3,
+.edit-subsection-title {
+  color: #003691 !important;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e6f0;
+  padding-bottom: 8px;
+}
+/* Consistent alert box style */
+.alert-box {
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Error message (red) */
+.alert-error {
+  background-color: #fde8e8;
+  color: #c0392b;
+  border: 1px solid #f5c2c2;
+}
+
+/* Success message (green, centered above button) */
+.success-text {
+  background-color: #e6f4ea;
+  color: #1b6e36;
+  border: 1px solid #a8e6b0;
+  text-align: center;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
